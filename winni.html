@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winni: Online Delivery of Cakes,flowers
+    </title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEqo5kiJ6n76teRGz2ylrvg8Dsbwz0m1JoWQ&s">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/2a929caf52.js" crossorigin="anonymous"></script>
+    <style>
+        /* nav 1 */
+        
+        .nav1 {
+            position: fixed;
+            top: 0;
+            z-index: 99;
+            width: 100%;
+        }
+        
+        .fixedNav {
+            margin: 0;
+            height: 68px;
+            width: 100%;
+        }
+        /* nav 2 */
+        
+        .nav2 {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            position: fixed;
+            top: 72px;
+            overflow: visible;
+            transition: .4s;
+            width: 100%;
+            z-index: 99;
+        }
+        
+        .font-5 {
+            font-size: 1.5rem;
+            opacity: .7;
+            /* font-weight: 900; */
+        }
+        
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .navbar-nav .dropdown-menu {
+            margin-top: 0;
+            /* Adjust as needed */
+        }
+        
+        @media (min-width: 901px)and(max-width: 1000px) {
+            .nav2 {
+                width: 100%;
+            }
+            .font-5 {
+                font-size: 10px;
+                /* font-weight: normal; */
+            }
+        }
+        /* carousel */
+        
+        .carousel-indicators {
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: black;
+        }
+        
+        .carouselControl {
+            height: 50px;
+            width: 50px;
+            margin-top: auto;
+            margin-bottom: auto;
+            background-color: black;
+        }
+        
+        @media (max-width: 600px) {
+            .carousel-indicators {
+                display: none;
+            }
+            .grid2 div img {
+                width: 100%;
+            }
+        }
+        /* main */
+        
+        .cont {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        
+        .main {
+            margin-top: 64px;
+        }
+        
+        @media (max-width: 950px) {
+            .nav2 {
+                display: none;
+            }
+            .main {
+                margin-top: 2px;
+            }
+        }
+        /* grid 1 small images */
+        
+        .grid1 div img {
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+        }
+        
+        .grid1 div P {
+            font-size: 1.5rem;
+            /* font-weight: 900; */
+        }
+        
+        @media (max-width: 425px) {
+            .grid1 div img {
+                height: 50px;
+                width: 50px;
+                cursor: pointer;
+            }
+            .grid1 div P {
+                font-size: 10px;
+                font-weight: normal;
+            }
+        }
+        /* blue image */
+        
+        .textedImage {
+            width: 100%;
+            border-radius: 70px;
+        }
+        
+        .grid3 {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .photo-cakeText {
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+            padding: 0;
+            overflow: hidden;
+            margin: 0;
+            white-space: normal;
+            /* Prevent text from wrapping */
+            /* text-overflow: clip; */
+            /* Show ellipsis when text overflows */
+            position: relative;
+        }
+        
+        .ratings {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        
+        @media (max-width: 750px) {
+            .ratings {
+                display: none;
+            }
+            .carouselControl {
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar nav1 navbar-expand-md bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <img src="//assets.winni.in/img/newlogo/logo-test-36-CL-1.png" alt="Winni"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <form class="d-flex">
+                            <input class="form-control border-0 bg-light" type="text" placeholder="Search for gifts">
+                            <button class="btn  bg-light" type="button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <li class="nav-item bg-light ms-3">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-location-dot"></i> Delivery Location</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav float-end ms-auto  font-5">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user text-dark"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-heart text-dark"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-cart-shopping text-dark"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <div class="fixedNav"></div>
+        <nav class="navbar navbar-expand-md nav2 p-0 bg-light navbar-light">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-danger" href="#" role="button" data-bs-toggle="dropdown">EXPRESS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">CAKES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">FLOWERS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">PLANTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">GIFTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">PESONALIZED GIFTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">CHOCOLATES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">COMBOS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">BIRTHDAY</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">ANNIVERSARY</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">OCCASSIONS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item border-start">
+                        <a class="nav-link " href="#"><img src="https://assets.winni.in/groot/2023/11/20/desktop/scooter-animation-fifth.gif" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+
+
+        <div id="carouselContainer" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators ">
+                <button type="button" data-bs-target="#carouselContainer" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselContainer" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselContainer" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselContainer" data-bs-slide-to="3"></button>
+
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://assets.winni.in/sf-img/live/visuals/home/desktop/2024/6/1719379829712.jpg" alt="discount" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets.winni.in/sf-img/live/visuals/home/desktop/2024/4/1712552211535.jpg" alt="flowers" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets.winni.in/sf-img/live/visuals/home/desktop/2024/6/1719213604046.jpg" alt="flowers" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets.winni.in/sf-img/live/visuals/home/desktop/2024/5/1715681603912.jpg" alt="flowers" class="d-block" style="width:100%">
+                </div>
+            </div>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev carouselControl rounded-circle " type="button" data-bs-target="#carouselContainer" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next carouselControl rounded-circle " type="button" data-bs-target="#carouselContainer" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <section class="grid1 cont  mt-5 mb-5">
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/cake.jpg" alt="">
+                            <p class="text-center">Cakes</p>
+                        </div>
+                        <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/flowers.jpg" alt="">
+                            <p class="text-center">Flowers</p>
+                        </div>
+                        <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/combos.jpg" alt="">
+                            <p class="text-center">Combos</p>
+                        </div>
+                        <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/plants.jpg" alt="">
+                            <p class="text-center">Plants</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/chocolates.jpg" alt="">
+                            <p class="text-center">Chocolates</p>
+                        </div>
+                        <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/gifts.jpg" alt="">
+                            <p class="text-center">Gifts</p>
+                        </div>
+                        <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/personalised.jpg" alt="">
+                            <p class="text-center">Personalized</p>
+                        </div>
+                        <div class="col-3"><img src="https://assets.winni.in/groot/2024/01/22/desktop/desktop-crystal-gift.jpg" alt="">
+                            <p class="text-center">Crystal Gifts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cont">
+            <div class="row mb-5 grid2">
+                <h2 class="text-center"> Must Have</h2>
+                <div class="col-sm-4">
+                    <img class="col-sm-12" src="https://assets.winni.in/groot/2024/01/22/desktop/best-seller-cake.jpg?w=600" alt="">
+                    <img src="https://assets.winni.in/groot/2023/12/18/desktop/air-purifying-plants.jpg" class="col-sm-12 mt-3 mb-3" alt="">
+                    <img src="https://assets.winni.in/groot/2023/12/18/desktop/chocolate-bouquet.jpg" class="col-sm-12" alt="">
+
+                </div>
+                <div class="col-sm-4">
+                    <img class="col-sm-12" src="https://assets.winni.in/groot/2024/01/22/desktop/roses-image-second.jpg?w=600" alt="">
+                    <img class="col-sm-12" src="https://assets.winni.in/groot/2024/01/22/desktop/bottles-desktop.jpg?w=600" alt="">
+                </div>
+                <div class="col-sm-4">
+                    <img src="https://assets.winni.in/groot/2024/01/18/desktop/flower-combos-image.jpg?w=600" class="col-sm-12" alt="">
+                    <img src="https://assets.winni.in/groot/2024/01/22/desktop/caricature-desktop.jpg?w=600" class="col-sm-12 mt-3 mb-3" alt="">
+                    <img src="https://assets.winni.in/groot/2023/12/18/desktop/hampers.jpg" class="col-sm-12" alt="">
+
+                </div>
+
+            </div>
+        </section>
+        <section class="cont">
+
+            <!-- blue container image -->
+            <div>
+                <img class=" textedImage" src="https://assets.winni.in/sf-img/live/visuals/home/desktop/2024/6/1719549463526.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="cont">
+
+            <div class="row text-center grid mt-5">
+                <h2>Cakes</h2>
+                <p>Dreamy cakes for every occasion</p>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in//groot/2024/01/22/desktop/photo-cake.jpg" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Photo Cakes</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2024/01/22/desktop/kids-cake-desktop.jpg" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Kids Cakes</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2024/01/22/desktop/pinata-cake.jpg" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Pinata Cakes</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2024/01/22/desktop/bomb-cake.jpg" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Bomb Cakes</b>
+                        <p>staring from ₹2,399</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="mt-5 mb-5">
+            <div class="cont">
+                <div class="container">
+                    <span class="h2">Bestsellers</span>
+                    <button class="btn bg-black text-white btnCake btn-lg">Cakes</button>
+                    <button class="btn btnFlower btn-lg">Flowers</button>
+
+                    <div class="row  text-center cakeBtn grid  ">
+
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2023/10/89980.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>red roses bouqet with chocolate cake </p>
+                                <p>₹899</p>
+                                <button class="ratings btn btn-success">4.3</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2024/3/94564.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Marble Crunch CAke</p>
+                                <p>staring from ₹899</p>
+                                <button class="ratings btn btn-success">4.7</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2023/8/88959.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Yummy Pineapple Cake</p>
+                                <p>staring from ₹899</p>
+                                <button class="ratings btn btn-success">4.7</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2024/3/94610.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Delicious Rasmalai Cake</p>
+                                <p>staring from ₹2,399</p>
+                                <button class="ratings btn btn-success">4.6</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row text-center d-none flowerBtn grid ">
+
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2014/8/46820.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Miniscule Bunch Of Love </p>
+                                <p>₹899</p>
+                                <button class="ratings btn btn-success">4.7</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2022/6/61621.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Love and emotions orchid</p>
+                                <p>staring from ₹899</p>
+                                <button class="ratings btn btn-success">5.0</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2024/3/94426.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Red Roses and chocolate cake</p>
+                                <p>staring from ₹899</p>
+                                <button class="ratings btn btn-success">4.7</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2021/10/54271.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Exotic red roses basket</p>
+                                <p>staring from ₹2,399</p>
+                                <button class="ratings btn btn-success">4.7</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cont">
+
+            <div class="row text-center grid mt-5">
+                <h2>Flowers</h2>
+                <p>Petals of happiness</p>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2023/12/18/desktop/flowers-first-image.jpg?w=385" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>roses</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2023/12/18/desktop/basket-arrangement.jpg?w=385" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Basket Arrangements</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2023/12/18/desktop/premium-flowers.jpg?w=385" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Premium FLowers</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2023/12/18/desktop/lillies.jpg?w=385" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>lilies</b>
+                        <p>staring from ₹2,399</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        let nav2 = document.querySelector('.nav2');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav2.style.height = '0';
+                // nav2.style.opacity = '0';
+                nav2.style.overflow = 'clip';
+                // nav2.style.padding = '0';
+
+
+            } else {
+                nav2.style.height = 'auto';
+                nav2.style.overflow = 'visible';
+                // nav2.style.opacity = '1';
+
+            }
+        });
+        let btnCake = document.querySelector('.btnCake')
+        let btnflower = document.querySelector('.btnFlower')
+        let cakeBtn = document.querySelector('.cakeBtn')
+        let flowerBtn = document.querySelector('.flowerBtn')
+        btnCake.addEventListener('click', () => {
+            flowerBtn.style.display = 'none'
+            cakeBtn.style.display = 'flex'
+            btnflower.style.backgroundColor = 'white';
+            btnflower.style.color = 'black'
+            btnCake.style.backgroundColor = 'black';
+            btnCake.style.color = 'white'
+        })
+        btnflower.addEventListener('click', () => {
+            flowerBtn.style.display = 'flex';
+            cakeBtn.style.display = 'none';
+            flowerBtn.classList.remove('d-none');
+            btnflower.style.backgroundColor = 'black';
+            btnflower.style.color = 'white'
+            btnCake.style.backgroundColor = 'white';
+            btnCake.style.color = 'black'
+            btnCake.classList.remove('bg-black');
+            btnCake.classList.remove('text-white');
+
+
+        })
+    </script>
+</body>
+
+</html>
